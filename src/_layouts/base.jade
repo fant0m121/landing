@@ -1,0 +1,69 @@
+//- Custom Configuration
+block config
+  //- Setup site's base URL to match the "baseUrl" key within `package.json`
+  //- Otherwise default to relative pathing
+  - var baseUrl = config.baseUrl || './'
+
+doctype html
+<html class='no-js' lang='en'>
+
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  title socialsend
+  meta(name='description', content= 'A new Yeogurt application')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
+  
+  block stylesheets
+    link(rel='stylesheet', href= baseUrl + 'styles/main.css')
+
+body
+  <!--[if lt IE 11]>
+  <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  
+  header.ui-header
+    .l-grid.l-grid--container
+      .l-row.l-row--lg-middle
+        .l-col.l-col--lg-3
+          a.ui-header__logo(href="/") SocialSend
+        .l-col.l-col--lg-auto.l-col--md-pull-right
+          .ui-header__menu
+            nav.ui-menu
+              .ui-menu__item
+                a.ui-menu__link(href="/") Особенности
+              .ui-menu__item
+                a.ui-menu__link(href="/") Цены
+              .ui-menu__item
+                a.ui-menu__link(href="/") Отзывы
+         .l-col.l-col--lg-offset-1.l-col--lg-auto 
+           a.ui-header__trial(href="/") Пробная версия
+  
+  main.ui-content
+    block content
+    
+  footer.ui-footer
+    .l-grid.l-grid--container
+      .l-row.l-row--lg-middle
+        .l-col.l-col--lg-4
+          .ui-footer__logo
+            a.ui-footer-logo(href="/") Social
+              span Send
+          .ui-footer__copyright © 2017 SocialSend. All Rights Reserved
+        .l-col.l-col--lg-4
+          .ui-footer__info
+            | Отправляя любую форму на сайте, вы соглашаетесь с &nbsp;
+            a(href="/") договором оферты
+            | &nbsp; и &nbsp; 
+            a(href="/") политикой конфиденциальности 
+            | &nbsp; данного сайта
+        .l-col.l-col--lg-4.h-text--lg-right
+          .ui-footer__verify-by
+            img(src="/images/verify-by.png") 
+          
+
+  block scripts
+    script(src= baseUrl + 'scripts/main.js')
+
+</html>
