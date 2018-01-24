@@ -6,6 +6,7 @@
 
 @import '_fonts';
 @import '_variable';
+@import 'heading';
 @import 'button';
 
 // Components
@@ -71,6 +72,8 @@ init($breakpoints, $columns)
 
   &__trial
     font-size 14px
+    font-family $font-proxima-nova
+    font-weight bold
     text-transform uppercase
 
 .ui-menu
@@ -82,6 +85,7 @@ init($breakpoints, $columns)
     padding-left 38px
 
 .ui-footer
+  padding 30px 0 80px
   color $color-gray
   font-family $font-default
   font-size 12px
@@ -106,8 +110,8 @@ init($breakpoints, $columns)
       color $color-blue-de-france
 
 .ui-home-main
-  background-image linear-gradient($color-medium-slate-blue 0%, $color-cornflower-blue 100%)
-  padding 122px 0 92px
+  background $color-medium-slate-blue
+  padding 170px 0 17px
   position relative
 
   &:after
@@ -149,10 +153,10 @@ init($breakpoints, $columns)
     margin-top 50px
 
   &__button
-    margin-top 50px
+    margin-top 60px
 
 .ui-home-advantages
-  padding 220px 0 90px
+  padding 200px 0 90px
 
 .ui-home-advantage
   &__heading
@@ -169,7 +173,7 @@ init($breakpoints, $columns)
       left 0
       bottom 0
       height 2px
-      background blue
+      background $color-blue-de-france
       position absolute
 
   &__text
@@ -186,3 +190,81 @@ init($breakpoints, $columns)
 
     img
       max-width 100%
+
+.ui-home-advantage + .ui-home-advantage
+  padding-top 110px
+
+.ui-home-info
+  background $color-munsell
+  padding 65px 0 55px
+
+  &__content
+    background url('/images/info-bg.png') 50% 50% no-repeat
+    padding 40px 0
+    background-size contain
+
+  &__button
+    padding-top 30px
+
+  &__item
+    &--flex
+      display flex
+
+    &--result
+      padding-top 138px
+
+    &--stat
+      padding-top 64px
+      margin-left -70px
+
+      .ui-home-info__item-icon
+        margin-right 13px
+
+  &__item-content
+    flex 1
+    padding-left 13px
+
+  &__item-value
+    font-family $font-fira
+    font-weight 300
+    font-size 72px
+    color $color-blue-de-france
+    line-height 24px
+
+    span
+      font-size 30px
+
+  &__item-value + &__item-title
+    padding-top 18px
+
+  &__item-title
+    font-family $font-default
+    font-size 14px
+    color $color-blue-de-france
+    line-height 24px
+    text-transform uppercase
+    font-weight bold
+
+  &__item-title + &__item-text
+    padding-top 18px
+
+  &__item-title + &__item-value
+    padding-top 28px
+
+  &__item-text
+    font-family $font-default
+    font-size 16px
+    color $color-dark-jungle-green
+    line-height 24px
+
+  &__item-text + &__item-title
+    padding-top 18px
+
+  &__item-text + &__item-footer
+    padding-top 18px
+
+  &__item-footer
+    color $color-blue-de-france
+    font-family $font-default
+    font-size 30px
+    line-height 24px

@@ -2,7 +2,6 @@
   border 0
   outline 0
   background transparent
-  font-family $font-proxima-nova
   line-height 1
   text-decoration none
   display inline-block
@@ -11,14 +10,19 @@
 
   &--default
     font-size 16px
-    color $color-dark-midnight-blue
     text-align center
     line-height 54px
     text-transform uppercase
     border-radius 28px
     padding 0 36px
     font-weight bold
+    font-family $font-default
 
   &--yellow
     background-color $color-yellow
     box-shadow 2px 3px 12px 0 rgba(0, 0, 0, .15)
+    color $color-oxford-blue
+
+  &--blue
+    color $color-white
+    background $color-blue-de-france
