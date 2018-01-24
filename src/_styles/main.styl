@@ -6,11 +6,12 @@
 
 @import '_fonts';
 @import '_variable';
+@import 'button';
+
+// Components
 @import 'grid/mixins/helpers'
 @import 'grid/mixins/grid-framework'
 @import 'grid/mixins/bem'
-
-// Components
 @import 'grid/components/col'
 @import 'grid/components/grid'
 @import 'grid/components/row'
@@ -48,12 +49,17 @@ init($breakpoints, $columns)
   text-align center
   margin 0
   background #fff8e2
-  color #000
+  color black
   padding 0.5em 0
 
 .ui-header
   padding 44px 0
-  background $color-medium-slate-blue
+  position fixed
+  width 100%
+  top 0
+  right 0
+  left 0
+  z-index 10
 
   a
     color $color-white
@@ -61,6 +67,7 @@ init($breakpoints, $columns)
 
   &__logo
     font-size 30px
+    font-family $font-systopie
 
   &__trial
     font-size 14px
@@ -89,11 +96,93 @@ init($breakpoints, $columns)
       text-decoration none
 
     span
-      color $color-bleu-de-france
+      color $color-blue-de-france
 
   &__copyright
     padding-top 18px
 
   &__info
     a
-      color $color-bleu-de-france
+      color $color-blue-de-france
+
+.ui-home-main
+  background-image linear-gradient($color-medium-slate-blue 0%, $color-cornflower-blue 100%)
+  padding 122px 0 92px
+  position relative
+
+  &:after
+    position absolute
+    content url('/images/main-stat.png')
+    bottom 0
+    right 25%
+    font-size 0
+    margin-left -222px
+
+  &:before
+    position absolute
+    content ''
+    background url("/images/main-bg.png") no-repeat right bottom
+    background-size cover
+    top 0
+    bottom -75px
+    left 0
+    font-size 0
+    width 65%
+    z-index 1
+
+  &__container
+    position relative
+    z-index 2
+
+  &__heading
+    color white
+    font-family $font-proxima-nova
+    font-weight bold
+    font-size 34px
+    line-height 54px
+
+  &__text
+    font-size 16px
+    color white
+    line-height 24px
+    font-family $font-default
+    margin-top 50px
+
+  &__button
+    margin-top 50px
+
+.ui-home-advantages
+  padding 220px 0 90px
+
+.ui-home-advantage
+  &__heading
+    font-family $font-proxima-nova
+    font-size 30px
+    line-height 45px
+    color black
+    position relative
+    padding-bottom 20px
+
+    &:before
+      content ''
+      width 60px
+      left 0
+      bottom 0
+      height 2px
+      background blue
+      position absolute
+
+  &__text
+    font-family $font-default
+    font-size 14px
+    color $color-taupe
+    text-align left
+    line-height 21px
+    margin-top 20px
+
+  &__image
+    font-size 0
+    text-align center
+
+    img
+      max-width 100%

@@ -3,13 +3,20 @@ extends _layouts/base
 include _modules/link/link
 
 block content
-  .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v2.0.1
+  .ui-home-main
+    .l-grid.l-grid--container.ui-home-main__container
+      .l-row.l-row--xs-middle
+        .l-col.l-col--xs-12.l-col--md-8
+          .ui-home-main__heading Создайте свою первую прибыльную авторассылку в социальных сетях за 6 минут
+          .ui-home-main__text SocialSend это сервис, который позволяет быстро и просто создавать рассылки через социальные сети. И с их помощью находить новую аудиторию и конвертировать ее в клиентов.
+          .ui-home-main__button
+            .ui-button.ui-button--default.ui-button--yellow Попробовать бесплатно
+  .ui-home-advantages
+    .l-grid.l-grid--container
+      .l-row.l-row--xs-middle.ui-home-advantage
+        .l-col.l-col--xs-12.l-col--md-6
+          .ui-home-advantage__heading Отправляйте сообщения правильным путем
+          .ui-home-advantage__text Массовая отправка e-mail теряет свою эффективность каждый месяц. Сотни и тысячи писем остаются неоткрытыми в почтовых ящиках ваших клиентов ежедневно. Поэтому SocialSend отправляет сообщения для ваших клиентов туда, где они их ВСЕГДА читают: в социальные сети
+        .l-col.l-col--xs-12.l-col--md-6
+          .ui-home-advantage__image
+            img(src="/images/advantage-1.png", alt="")
