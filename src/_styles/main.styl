@@ -268,3 +268,59 @@ init($breakpoints, $columns)
     font-family $font-default
     font-size 30px
     line-height 24px
+
+.ui-home-work
+  padding 65px 0 55px
+
+  &__item
+    padding 110px 0 70px
+    position relative
+
+    &:before
+      content ''
+      width 60px
+      left calc(50% - 30px)
+      bottom 0
+      height 2px
+      background $color-blue-de-france
+      position absolute
+
+  &__text
+    padding 40px 0
+
+.ui-home-work-item
+  font-family $font-default
+  line-height 24px
+  position relative
+
+  &__icon
+    height 70px
+    display flex
+    justify-content center
+    align-items center
+
+  &__icon + &__description
+    padding-top 26px
+
+  &__description
+    font-family $font-default
+    color $color-dark-jungle-green
+
+  &__time
+    font-size 14px
+    color $color-dim-gray
+
+.ui-home-work-item + .ui-home-work-item:before
+  content url('/images/arrow-right.png')
+  position absolute
+  left -10px
+  top 26px
+
+.ui-home-work-text
+  font-family $font-default
+  font-size 16px
+  color $color-dark-jungle-green
+  line-height 24px
+
+.ui-home-work-text + .ui-home-work-text
+  padding-top 40px
