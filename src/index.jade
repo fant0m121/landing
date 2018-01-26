@@ -6,7 +6,7 @@ block content
   .ui-home-main
     .l-grid.l-grid--container.ui-home-main__container
       .l-row.l-row--xs-middle
-        .l-col.l-col--xs-12.l-col--md-10.wow.fadeInLeft(data-wow-duration="1.5s")
+        .l-col.l-col--xs-12.l-col--md-8.wow.fadeInLeft(data-wow-duration="1.5s")
           .ui-home-main__heading Создайте свою первую прибыльную авторассылку в социальных сетях за 6 минут
           .ui-home-main__text SocialSend это сервис, который позволяет быстро и просто создавать рассылки через социальные сети. И с их помощью находить новую аудиторию и конвертировать ее в клиентов.
           .ui-home-main__button
@@ -134,7 +134,7 @@ block content
         .l-col.l-col--xs-12.h-text--xs-center
           .ui-heading.ui-heading--lvl2.ui-heading--white Тарифные планы
       .l-row.ui-home-rates__item
-        .l-col.l-col--xs-12.l-col--sm-6.l-col--md-3.l-col--no-gutters.h-text--xs-center
+        .l-col.l-col--xs-12.l-col--md-6.l-col--lg-3.l-col--no-gutters.h-text--xs-center
           .ui-price-cart.ui-price-cart--first
             .ui-price-cart__header Киндер
             .ui-price-cart__price
@@ -152,7 +152,7 @@ block content
               | подписчиков
             .ui-price-cart__button
               .ui-button.ui-button--xs.ui-button--white оплатить
-        .l-col.l-col--xs-12.l-col--sm-6.l-col--md-3.l-col--no-gutters.h-text--xs-center
+        .l-col.l-col--xs-12.l-col--md-6.l-col--lg-3.l-col--no-gutters.h-text--xs-center
           .ui-price-cart
             .ui-price-cart__header базовый
             .ui-price-cart__price
@@ -170,7 +170,7 @@ block content
               | подписчиков
             .ui-price-cart__button
               .ui-button.ui-button--xs.ui-button--white оплатить
-        .l-col.l-col--xs-12.l-col--sm-6.l-col--md-3.l-col--no-gutters.h-text--xs-center
+        .l-col.l-col--xs-12.l-col--md-6.l-col--lg-3.l-col--no-gutters.h-text--xs-center
           .ui-price-cart.ui-price-cart--active
             .ui-price-cart__header солидный
             .ui-price-cart__price
@@ -188,7 +188,7 @@ block content
               | подписчиков
             .ui-price-cart__button
               .ui-button.ui-button--xs.ui-button--white оплатить
-        .l-col.l-col--xs-12.l-col--sm-6.l-col--md-3.l-col--no-gutters.h-text--xs-center
+        .l-col.l-col--xs-12.l-col--md-6.l-col--lg-3.l-col--no-gutters.h-text--xs-center
           .ui-price-cart.ui-price-cart--last
             .ui-price-cart__header всё и сразу
             .ui-price-cart__price
@@ -200,7 +200,10 @@ block content
             .ui-price-cart__function
               img(src="/images/check.png", alt="")
               span Доступны все функции
-            .ui-price-cart__subscribers Неограничено подписчиков
+            .ui-price-cart__subscribers 
+              | Неограничено 
+              br
+              | подписчиков
             .ui-price-cart__button
               .ui-button.ui-button--xs.ui-button--white оплатить
       .l-row
@@ -222,19 +225,21 @@ block content
                 br
                 | вконтакте
           .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center
-            .ui-home-numbers-item__value 2 млн
-            .ui-home-numbers-item__title писем
-            .ui-home-numbers-item__text
-              | Отправлено нашими
-              br
-              | клиентами
+            .ui-home-numbers-item
+              .ui-home-numbers-item__value 2 млн
+              .ui-home-numbers-item__title писем
+              .ui-home-numbers-item__text
+                | Отправлено нашими
+                br
+                | клиентами
           .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center
-            .ui-home-numbers-item__value 10 млн
-            .ui-home-numbers-item__title рублей
-            .ui-home-numbers-item__text
-              | Заработано авторами
-              br
-              | рассылок
+            .ui-home-numbers-item
+              .ui-home-numbers-item__value 10 млн
+              .ui-home-numbers-item__title рублей
+              .ui-home-numbers-item__text
+                | Заработано авторами
+                br
+                | рассылок
         .l-row.ui-home-numbers__button
           .l-col.l-col--xs-12.h-text--xs-center
             .ui-button.ui-button--default.ui-button--blue Попробовать бесплатно
