@@ -301,6 +301,7 @@ init($breakpoints, $columns)
 
   &__item-footer
     font-family $font-default
+    color $color-blue-de-france
     font-size 30px
     line-height 24px
 
@@ -331,6 +332,10 @@ init($breakpoints, $columns)
   font-family $font-default
   line-height 24px
   position relative
+  margin-top 50px
+
+  @media(min-width: 940px)
+    margin-top 0
 
   &__icon
     height 70px
