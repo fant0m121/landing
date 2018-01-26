@@ -1,0 +1,136 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+  .ui-capabilities
+    .l-grid.l-grid--container
+      .l-row
+        .l-col.l-col--xs-12
+          .ui-heading.ui-heading--lvl1.ui-heading--white Возможности
+      .l-row
+        .l-col.l-col--xs-12
+          .ui-capabilities__text 
+            | Мы собрали все лучшее от e-mail рассылок и социальных 
+            br
+            | сетей в одном месте. На что способен SocialSend? 
+            br
+            | Смотрите ниже
+  .ui-capabilities-item
+    .l-grid.l-grid--container
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center
+          .ui-heading.ui-heading--lvl2.ui-heading--default Главные возможности
+      .l-row
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-1.png", alt="")
+            .ui-capability-cart__title Авторассылки в личные сообщения
+            .ui-capability-cart__text Перенесите или создайте авторассылку в SocialSend и ее читаемость составит до 97%
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-2.png", alt="")
+            .ui-capability-cart__title Массовые рассылки в ЛС
+            .ui-capability-cart__text Идеально, чтобы разом уведомить определенную группу людей о новости или акции
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-3.png", alt="")
+            .ui-capability-cart__title Сбор VK лидов на любом сайте
+            .ui-capability-cart__text Вы можете просто заменить email форму регистрации на своем лендинге и сразу начать собирать "лидов" из VK
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-4.png", alt="")
+            .ui-capability-cart__title Прозрачная статистика и UTM
+            .ui-capability-cart__text Все данные по рассылкам всегда у вас перед глазами: вы легко можете проанализировать ситуацию и еще улучшить показатели
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-5.png", alt="")
+            .ui-capability-cart__title Сбор лидов в группе VK
+            .ui-capability-cart__text Посетители группы теперь могут подписываться на расылку. Так можно использовать мощь автоматизации и напрямую общаться с аудиторией в ЛС
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-6.png", alt="")
+            .ui-capability-cart__title Сбор лидов сразу из таргетинга VK
+            .ui-capability-cart__text Благодаря SocialSend вы можете в рекламе, промо-постах, постах и любом другом месте VK сразу собирать лидов в рассылку, минуя, даже, лендинг. Это поможет повысить конверсию
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-7.png", alt="")
+            .ui-capability-cart__title Тотальная сегментация базы
+            .ui-capability-cart__text Массовые рассылки всем подряд понижают лояльность подписчиков. Теперь вы можете очень точно исследовать свою базу и делать рассылки на 100% индивидуально
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-8.png", alt="")
+            .ui-capability-cart__title Система тегирования
+            .ui-capability-cart__text В зависимсоти от поведения подписчиков вы можете присваивать им те или иные теги — это отличный дополнительный механизм детальной сегментации базы
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-9.png", alt="")
+            .ui-capability-cart__title Учет всех действий подписчиков
+            .ui-capability-cart__text Стройте свои рассылки, основываясь на поведении подписчиков. Так вы сможете добиться максимально вовлеченности клиента, а значит увеличить продажи
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-10.png", alt="")
+            .ui-capability-cart__title Простое совмещение с любой email-рассылкой в 2 клика
+            .ui-capability-cart__text В зависимсоти от поведения подписчиков вы можете присваивать им те или иные теги — это отличный дополнительный механизм детальной сегментации базы
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-11.png", alt="")
+            .ui-capability-cart__title Только "экологичные" функции
+            .ui-capability-cart__text Весь функционал реализован на открытом API, "белыми" методами и не нарушает технических и моральных принципов Вконтакте
+        .l-col.l-col--xs-12.l-col--lg-6.h-text--xs-center
+          .ui-capability-cart
+            .ui-capability-cart__icon
+              img(src="/images/capability-12.png", alt="")
+            .ui-capability-cart__title Генерация форм подписки
+            .ui-capability-cart__text Не нужно знать программирования. Создайте форму подписки в понятном интерфейсе и просто вставьте ее на свой сайт
+  .ui-capabilities-work
+    .l-grid.l-grid--container
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center
+          .ui-heading.ui-heading--lvl2.ui-heading--default как внедрить соц.рассылки за 9 минут
+      .l-row.l-row--xs-middle.ui-capabilities-work__item
+        .l-col.l-col--xs-3.h-text--xs-center.ui-capabilities-work-item
+          .ui-capabilities-work-item__icon
+            img(src="/images/work-1.png", alt="")
+          .ui-capabilities-work-item__description Проходите простую регистрацию
+          .ui-capabilities-work-item__time (1 минута)
+        .l-col.l-col--xs-3.h-text--xs-center.ui-capabilities-work-item
+          .ui-capabilities-work-item__icon
+            img(src="/images/work-2.png", alt="")
+          .ui-capabilities-work-item__description Создаете свою первую рассылку
+          .ui-capabilities-work-item__time (4 минуты)
+        .l-col.l-col--xs-3.h-text--xs-center.ui-capabilities-work-item
+          .ui-capabilities-work-item__icon
+            img(src="/images/work-3.png", alt="")
+          .ui-capabilities-work-item__description
+            | Создаете кнопку
+            br
+            | или форму подписки
+          .ui-capabilities-work-item__time (1 минута)
+        .l-col.l-col--xs-3.h-text--xs-center.ui-capabilities-work-item
+          .ui-capabilities-work-item__icon
+            img(src="/images/work-4.png", alt="")
+          .ui-capabilities-work-item__description
+            | Размещаете ее
+            br
+            | на вашем сайте
+          .ui-capabilities-work-item__time (1 минута)
+      .l-row.ui-capabilities-work__button
+        .l-col.l-col--xs-12.h-text--xs-center
+          .ui-button.ui-button--default.ui-button--blue Попробовать авторассылку
+      .l-row.ui-capabilities-work__line
+        .l-col.l-col--xs-12
+          

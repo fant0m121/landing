@@ -588,3 +588,112 @@ init($breakpoints, $columns)
 
   &__button
     padding-top 75px
+
+.ui-capabilities
+  background $color-medium-slate-blue
+  padding 170px 0 80px
+  position relative
+
+  &:before
+    content ''
+    position absolute
+    background url('/images/capabilities-bg.png') right bottom no-repeat
+    background-size cover
+    top 0
+    left 0
+    font-size 0
+    width 65%
+    z-index 1
+
+  &__text
+    font-family $font-default
+    font-size 20px
+    color $color-white
+    line-height 30px
+    padding-top 30px
+
+.ui-capabilities-item
+  background $color-munsell
+  padding 80px 0 110px
+
+.ui-capability-cart
+  margin-top 110px
+  padding 0 20px
+
+  &__icon
+    height 70px
+    display flex
+    align-items center
+    justify-content center
+
+  &__icon + &__title
+    padding-top 30px
+
+  &__title
+    font-family $font-proxima-nova
+    font-size 16px
+    color $color-rifle-green
+    letter-spacing 0.05em
+    line-height 24px
+    text-transform uppercase
+    font-weight bold
+
+  &__title + &__text
+    padding-top 30px
+
+  &__text
+    font-family $font-default
+    font-size 16px
+    color $color-cadet
+    line-height 24px
+
+.ui-capabilities-work
+  padding 65px 0 0
+
+  &__item
+    padding 110px 0 70px
+    position relative
+
+    &:before
+      content ''
+      width 60px
+      left calc(50% - 30px)
+      bottom 0
+      height 2px
+      background $color-blue-de-france
+      position absolute
+
+  &__item + &__button
+    padding-top 64px
+
+  &__button + &__line
+    padding-top 50px
+    border-bottom 1px solid $color-line
+
+.ui-capabilities-work-item
+  font-family $font-default
+  line-height 24px
+  position relative
+
+  &__icon
+    height 70px
+    display flex
+    justify-content center
+    align-items center
+
+  &__icon + &__description
+    padding-top 26px
+
+  &__description
+    font-family $font-default
+    color $color-dark-jungle-green
+
+  &__time
+    font-size 14px
+    color $color-dim-gray
+
+.ui-capabilities-work-item + .ui-capabilities-work-item:before
+  content url('/images/arrow-right.png')
+  position absolute
+  left -10px
+  top 26px
