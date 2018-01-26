@@ -4,9 +4,41 @@
 'use strict';
 
 var $ = require('jquery');
-var Link = require('../_modules/link/link');
+var Wow = require('wowjs');
 
 $(function() {
-  new Link(); // Activate Link modules logic
-  console.log('Welcome to Yeogurt!');
+  function getScrollPosition(el) {
+    el = el || window;
+    return {
+      x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,
+      y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop
+    };
+  };
+
+  function toggleHeaderClass(scrollPosition) {
+    var $header = $('.js-header');
+    if (scrollPosition.y > 0) {
+      $header.addClass('ui-header--fixed');
+    }
+    else {
+      $header.removeClass('ui-header--fixed');
+    }
+  }
+
+  $(window).on('scroll', function() {
+    toggleHeaderClass(getScrollPosition());
+  });
+
+  $(document).ready(function() {
+    toggleHeaderClass(getScrollPosition());
+    var wow = new Wow.WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 10,
+      mobile: false,
+      live: true,
+      scrollContainer: null
+    });
+    wow.init();
+  });
 });

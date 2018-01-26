@@ -1,5 +1,6 @@
 // Normalize Styles
 @import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/animate.css/animate.css';
 
 // Import Modules
 @import '../_modules/link/link';
@@ -61,6 +62,11 @@ init($breakpoints, $columns)
   right 0
   left 0
   z-index 10
+  transition padding .17s ease-in-out
+
+  &--fixed
+    padding 16px 0
+    background $color-medium-slate-blue
 
   a
     color $color-white
@@ -336,21 +342,6 @@ init($breakpoints, $columns)
   position relative
   padding 32px
 
-  &--first
-    border-top-left-radius 6px
-    border-bottom-left-radius 6px
-    &:after
-      border-top-left-radius 6px
-      border-bottom-left-radius 6px
-
-  &--last
-    border-top-right-radius 6px
-    border-bottom-right-radius 6px
-    &:after
-      border-top-right-radius 6px
-      border-bottom-right-radius 6px
-      border-right 0
-
   &:after
     content ''
     top 0
@@ -359,7 +350,23 @@ init($breakpoints, $columns)
     height 100%
     background $color-white
     position absolute
-    border-right 1px solid $color-lavender-mist
+    border-left 1px solid $color-lavender-mist
+
+  &--first
+    border-top-left-radius 6px
+    border-bottom-left-radius 6px
+    &:after
+      border-top-left-radius 6px
+      border-bottom-left-radius 6px
+      border-left 0
+
+  &--last
+    border-top-right-radius 6px
+    border-bottom-right-radius 6px
+    &:after
+      border-top-right-radius 6px
+      border-bottom-right-radius 6px
+      border-left 0
 
   & > *
     z-index 5
@@ -378,6 +385,7 @@ init($breakpoints, $columns)
       box-shadow 0 0 12px 0 rgba(0, 0, 0, .15)
       background-color #fff
       z-index 1
+      border-color transparent
 
   &__header
     font-family $font-proxima-nova

@@ -16,7 +16,7 @@ head
   link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400", rel="stylesheet")
-  
+
   block stylesheets
     link(rel='stylesheet', href= baseUrl + 'styles/main.css')
 
@@ -24,8 +24,8 @@ body
   <!--[if lt IE 11]>
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  
-  header.ui-header
+
+  header.ui-header.js-header
     .l-grid.l-grid--container
       .l-row.l-row--lg-middle
         .l-col.l-col--lg-3
@@ -39,12 +39,12 @@ body
                 a.ui-menu__link(href="/") Цены
               .ui-menu__item
                 a.ui-menu__link(href="/") Отзывы
-         .l-col.l-col--lg-offset-1.l-col--lg-auto 
+         .l-col.l-col--lg-offset-1.l-col--lg-auto
            a.ui-header__trial(href="/") Пробная версия
-  
+
   main.ui-content
     block content
-    
+
   footer.ui-footer
     .l-grid.l-grid--container
       .l-row.l-row--lg-middle
@@ -57,13 +57,13 @@ body
           .ui-footer__info
             | Отправляя любую форму на сайте, вы соглашаетесь с &nbsp;
             a(href="/") договором оферты
-            | &nbsp; и &nbsp; 
-            a(href="/") политикой конфиденциальности 
+            | &nbsp; и &nbsp;
+            a(href="/") политикой конфиденциальности
             | &nbsp; данного сайта
         .l-col.l-col--lg-4.h-text--lg-right
           .ui-footer__verify-by
-            img(src="/images/verify-by.png") 
-          
+            img(src="/images/verify-by.png")
+
 
   block scripts
     script(src= baseUrl + 'scripts/main.js')
