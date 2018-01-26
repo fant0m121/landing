@@ -117,28 +117,31 @@ init($breakpoints, $columns)
 
 .ui-home-main
   background $color-medium-slate-blue
-  padding 170px 0 17px
+  padding 170px 0 50px
   position relative
 
-  &:after
-    position absolute
-    content url('/images/main-stat.png')
-    bottom 0
-    right 25%
-    font-size 0
-    margin-left -222px
+  @media(min-width: 940px)
+    padding 170px 0 17px
 
-  &:before
-    position absolute
-    content ''
-    background url("/images/main-bg.png") no-repeat right bottom
-    background-size cover
-    top 0
-    bottom -75px
-    left 0
-    font-size 0
-    width 65%
-    z-index 1
+    &:after
+      position absolute
+      content url('/images/main-stat.png')
+      bottom 0
+      right 25%
+      font-size 0
+      margin-left -222px
+
+    &:before
+      position absolute
+      content ''
+      background url("/images/main-bg.png") no-repeat right bottom
+      background-size cover
+      top 0
+      bottom -75px
+      left 0
+      font-size 0
+      width 65%
+      z-index 1
 
   &__container
     position relative
@@ -159,10 +162,18 @@ init($breakpoints, $columns)
     margin-top 50px
 
   &__button
+    display flex
+    justify-content center
     margin-top 60px
 
+    @media(min-width: 768px)
+      justify-content flex-start
+
 .ui-home-advantages
-  padding 200px 0 90px
+  padding 60px 0
+
+  @media(min-width: 940px)
+    padding 200px 0 90px
 
 .ui-home-advantage
   &__heading
@@ -198,37 +209,56 @@ init($breakpoints, $columns)
       max-width 100%
 
 .ui-home-advantage + .ui-home-advantage
-  padding-top 110px
+  padding-top 60px
+
+  @media(min-width: 940px)
+    padding-top 110px
 
 .ui-home-info
   background $color-munsell
   padding 65px 0 55px
 
-  &__content
-    background url('/images/info-bg.png') 50% 50% no-repeat
-    padding 40px 0
-    background-size contain
+  @media(min-width: 940px)
+    &__content
+      background url('/images/info-bg.png') 50% 50% no-repeat
+      padding 40px 0
+      background-size contain
 
   &__button
     padding-top 30px
 
   &__item
+    margin-top 50px
+
+    @media(min-width: 940px)
+      margin-top 0
+
     &--flex
       display flex
+      justify-content center
+
+      @media(min-width: 768px)
+        justify-content flex-start
 
     &--result
-      padding-top 138px
+      @media(min-width: 940px)
+        padding-top 138px
 
     &--stat
-      padding-top 64px
-      margin-left -70px
+      @media(min-width: 940px)
+        margin-left -70px
+        padding-top 64px
 
-      .ui-home-info__item-icon
-        margin-right 13px
+        .ui-home-info__item-icon
+          margin-right 13px
 
   &__item-content
-    flex 1
+    flex none
     padding-left 13px
+
+    @media(min-width: 768px)
+      flex 1
+
 
   &__item-value
     font-family $font-fira
@@ -270,7 +300,6 @@ init($breakpoints, $columns)
     padding-top 18px
 
   &__item-footer
-    color $color-blue-de-france
     font-family $font-default
     font-size 30px
     line-height 24px
@@ -279,8 +308,8 @@ init($breakpoints, $columns)
   padding 65px 0 55px
 
   &__item
-    padding 110px 0 70px
     position relative
+    padding 0 0 50px
 
     &:before
       content ''
@@ -288,8 +317,12 @@ init($breakpoints, $columns)
       left calc(50% - 30px)
       bottom 0
       height 2px
-      background $color-blue-de-france
       position absolute
+      background $color-blue-de-france
+
+    @media(min-width: 940px)
+      padding 110px 0 70px
+
 
   &__text
     padding 40px 0
@@ -504,12 +537,25 @@ init($breakpoints, $columns)
   background $color-munsell
 
   &__item
-    padding 64px 0 54px
+    padding 0 0 24px
+
+    @media(min-width: 768px)
+      padding 24px 0 34px
+
+    @media(min-width: 940px)
+      padding 64px 0 54px
 
 .ui-home-review
   background $color-white
   border-radius 5px
-  padding 55px 60px 60px
+  padding 35px 30px 40px
+  margin-top 30px
+
+  @media(min-width: 768px)
+    margin-top 0
+
+  @media(min-width: 940px)
+    padding 55px 60px 60px
 
   &__user
     display flex
@@ -533,7 +579,10 @@ init($breakpoints, $columns)
     font-family $font-default
     font-size 12px
     color $color-taupe-gray
-    line-height 24px
+    line-height 16px
+
+    @media(min-width: 940px)
+      line-height 24px
 
   &__user + &__stats
     padding-top 40px
@@ -577,7 +626,14 @@ init($breakpoints, $columns)
   padding 65px 0 100px
 
   &__item
-    padding-top 120px
+    @media(min-width: 940px)
+      padding-top 120px
+
+.ui-home-confidence-item
+  margin-top 50px
+
+  @media(min-width: 940px)
+    margin-top 0
 
 .ui-home-trial
   background $color-blue-de-france
@@ -595,14 +651,19 @@ init($breakpoints, $columns)
   position relative
 
   &:before
-    content ''
     position absolute
-    background url('/images/capabilities-bg.png') right bottom no-repeat
+    content ''
+    background url("/images/capabilities-bg.png") no-repeat right bottom
     background-size cover
     top 0
     left 0
+    bottom 0
     font-size 0
     width 65%
+    z-index 1
+
+  &__header
+    position relative
     z-index 1
 
   &__text
@@ -611,14 +672,19 @@ init($breakpoints, $columns)
     color $color-white
     line-height 30px
     padding-top 30px
+    position relative
+    z-index 1
 
 .ui-capabilities-item
   background $color-munsell
   padding 80px 0 110px
 
 .ui-capability-cart
-  margin-top 110px
+  margin-top 50px
   padding 0 20px
+
+  @media(min-width: 940px)
+    margin-top 110px
 
   &__icon
     height 70px
@@ -651,8 +717,8 @@ init($breakpoints, $columns)
   padding 65px 0 0
 
   &__item
-    padding 110px 0 70px
     position relative
+    padding 0 0 50px
 
     &:before
       content ''
@@ -662,6 +728,9 @@ init($breakpoints, $columns)
       height 2px
       background $color-blue-de-france
       position absolute
+
+    @media(min-width: 940px)
+      padding 110px 0 70px
 
   &__item + &__button
     padding-top 64px
@@ -674,6 +743,10 @@ init($breakpoints, $columns)
   font-family $font-default
   line-height 24px
   position relative
+  margin-top 50px
+
+  @media(min-width: 940px)
+    margin-top 0
 
   &__icon
     height 70px
