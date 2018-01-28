@@ -3,8 +3,9 @@
 
 'use strict';
 
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
 var Wow = require('wowjs');
+require('owl.carousel');
 
 $(function() {
   function getScrollPosition(el) {
@@ -31,6 +32,45 @@ $(function() {
 
   $(document).ready(function() {
     toggleHeaderClass(getScrollPosition());
+
+    $('.js-confidence-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      dots: true,
+      nav: true,
+      responsiveClass:true,
+      responsive:{
+        0: {
+          nav: false,
+          items:1
+        },
+        544: {
+          nav: false,
+          items:2
+        },
+        768: {
+          nav: true,
+          items:4
+        }
+      }
+    });
+
+    $('.js-review-carousel').owlCarousel({
+      loop:true,
+      margin:0,
+      responsiveClass:true,
+      dots: true,
+      nav: true,
+      responsive:{
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        }
+      }
+    });
+
     var wow = new Wow.WOW({
       boxClass: 'wow',
       animateClass: 'animated',
@@ -40,5 +80,46 @@ $(function() {
       scrollContainer: null
     });
     wow.init();
+
+    $('a[href*="#"]')
+      .not('[href="#"]')
+      .not('[href="#0"]')
+      .click(function(event) {
+        // On-page links
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+          location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          // Does a scroll target exist?
+          if (target.length) {
+            // Only prevent default if animation is actually gonna happen
+            event.preventDefault();
+            $('html, body').animate({
+              scrollTop: target.offset().top - 66
+            }, 1000, function() {
+              // Callback after animation
+              // Must change focus!
+              var $target = $(target);
+              $target.focus();
+              if ($target.is(':focus')) { // Checking if the target was focused
+                return false;
+              }
+              else {
+                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                $target.focus(); // Set focus again
+              };
+            });
+          }
+        }
+      });
+  });
+});
+$(function() {
+  $('.js-mobile-menu').on('click', function() {
+    $('.ui-menu').css('top', $('.ui-header').outerHeight()).toggleClass('ui-menu--open');
+    $(this).toggleClass('ui-header__hamburger--open');
   });
 });
