@@ -1,7 +1,5 @@
 extends _layouts/base
 
-include _modules/link/link
-
 block content
   .ui-home-main
     .l-grid.l-grid--container.ui-home-main__container
@@ -210,45 +208,67 @@ block content
         .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
           .ui-home-rates__button
             .ui-button.ui-button--default.ui-button--yellow Попробовать за 1 рубль
+  .ui-home-free#i-free
+    .l-grid.l-grid--container
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-heading.ui-heading--lvl2.ui-heading--default.ui-home-free__header Бесплатный тест-драйв
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-free__subheading Получите полный доступ к функционалу SocialSend
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-free__time Срок тест-драйва:
+            span от 7 до 14 дней
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-free__text Каждый раз все решает случай. Проверьте свое везение ;)
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-free__button
+            .ui-button.ui-button--default.ui-button--blue Попробовать за 1 рубль
+      .l-row
+        .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-free__note Для работы в сервисе потребуется авторизация ВК и разрешение на получение сообщений
   .ui-home-numbers
     .l-grid.l-grid--container
       .l-row
         .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
           .ui-heading.ui-heading--lvl2.ui-heading--default Нашу технологию создания прибыльных социальных рассылок используют уже сотни предпринимателей со всего мира:
-        .l-row.ui-home-numbers__item
-          .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
-            .ui-home-numbers-item
-              .ui-home-numbers-item__value 1 121
-              .ui-home-numbers-item__title пользователей
-              .ui-home-numbers-item__text
-                | продвигают свой бизнес
-                br
-                | вконтакте
-          .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
-            .ui-home-numbers-item
-              .ui-home-numbers-item__value 2 млн
-              .ui-home-numbers-item__title писем
-              .ui-home-numbers-item__text
-                | Отправлено нашими
-                br
-                | клиентами
-          .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
-            .ui-home-numbers-item
-              .ui-home-numbers-item__value 10 млн
-              .ui-home-numbers-item__title рублей
-              .ui-home-numbers-item__text
-                | Заработано авторами
-                br
-                | рассылок
-        .l-row.ui-home-numbers__button
-          .l-col.l-col--xs-12.h-text--xs-center
-            .ui-button.ui-button--default.ui-button--blue Попробовать бесплатно
+      .l-row.ui-home-numbers__item
+        .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-numbers-item
+            .ui-home-numbers-item__value 1 121
+            .ui-home-numbers-item__title пользователей
+            .ui-home-numbers-item__text
+              | продвигают свой бизнес
+              br
+              | вконтакте
+        .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-numbers-item
+            .ui-home-numbers-item__value 2 млн
+            .ui-home-numbers-item__title писем
+            .ui-home-numbers-item__text
+              | Отправлено нашими
+              br
+              | клиентами
+        .l-col.l-col--xs-12.l-col--lg-4.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
+          .ui-home-numbers-item
+            .ui-home-numbers-item__value 10 млн
+            .ui-home-numbers-item__title рублей
+            .ui-home-numbers-item__text
+              | Заработано авторами
+              br
+              | рассылок
+      .l-row.ui-home-numbers__button
+        .l-col.l-col--xs-12.h-text--xs-center
+          .ui-button.ui-button--default.ui-button--blue Попробовать бесплатно
   .ui-home-results#i-reviews
     .l-grid.l-grid--container
       .l-row
         .l-col.l-col--xs-12.h-text--xs-center.wow.fadeIn(data-wow-duration="1.5s")
           .ui-heading.ui-heading--lvl2.ui-heading--default результаты наших клиентов
-      .l-row.ui-home-results__item.owl-carousel.owl-theme.owl-theme-blue.js-review-carousel.wow.fadeIn(data-wow-duration="1.5s")
+      .l-row.l-row--no-gutters.ui-home-results__item.owl-carousel.owl-theme.owl-theme-blue.js-review-carousel.wow.fadeIn(data-wow-duration="1.5s")
         .l-col.l-col--xs-12
           .ui-home-review
             .ui-home-review__user

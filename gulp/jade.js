@@ -66,14 +66,6 @@ module.exports = function(gulp, plugins, args, config, taskTarget, browserSync) 
         }
       }
     }))
-    .pipe(gulpif(args.production, plugins.htmlmin({
-      collapseBooleanAttributes: true,
-      conservativeCollapse: true,
-      removeCommentsFromCDATA: true,
-      removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
-      collapseWhitespace: true
-    })))
     .pipe(gulp.dest(dest))
     .on('end', browserSync.reload);
   });

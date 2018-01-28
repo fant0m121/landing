@@ -51,7 +51,7 @@ module.exports = function(gulp, plugins, args, config, taskTarget, browserSync) 
           .pipe(vsource(entry))
           .pipe(buffer())
           .pipe(plugins.sourcemaps.init({loadMaps: true}))
-            .pipe(gulpif(args.production, plugins.uglify()))
+            //.pipe(gulpif(args.production, plugins.uglify()))
             .on('error', plugins.notify.onError(config.defaultNotification))
           .pipe(plugins.rename(function(filepath) {
             // Remove 'source' directory as well as prefixed folder underscores

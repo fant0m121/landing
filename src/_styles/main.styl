@@ -4,9 +4,6 @@
 @import '../../node_modules/owl.carousel/dist/assets/owl.carousel.css';
 @import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 
-// Import Modules
-@import '../_modules/link/link';
-
 @import '_fonts';
 @import '_variable';
 @import 'heading';
@@ -32,21 +29,29 @@ init($breakpoints, $columns)
   -webkit-box-sizing border-box
   box-sizing border-box
 
-.yeogurt-info
-  text-align center
-  max-width 500px
-  margin-left auto
-  margin-right auto
+.ui-preloader
+  position fixed
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background-color white
+  z-index 99999
+  height 100%
+  width 100%
+  overflow hidden !important
 
-.version
-  font-size 14px
-  font-family Menlo, Monaco, Consolas, "Courier New", monospace
-  position absolute
-  bottom 10px
-  right 10px
-
-.logo
-  margin-top 15px
+  &__status
+    width 160px
+    height 160px
+    position absolute
+    left 50%
+    top 50%
+    background-image url('/images/ripple.gif')
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+    margin -80px 0 0 -80px
 
 // Styling on warning for users on IE7 or below
 .browsehappy
@@ -625,6 +630,47 @@ init($breakpoints, $columns)
     font-size 16px
     color $color-dark-jungle-green
     line-height 24px
+
+.ui-home-free
+  background $color-munsell
+  padding 65px 0 55px
+
+  &__subheading
+    font-family $font-default
+    font-weight 600
+    font-size 18px
+    color $color-dark-jungle-green
+    line-height 26px
+    padding-top 50px
+    text-transform uppercase
+
+  &__time
+    padding-top 36px
+    font-family $font-default
+    font-weight 300
+    font-size 56px
+    color $color-blue-de-france
+
+    span
+      display block
+      font-size 72px
+
+  &__text
+    padding-top 36px
+    font-family $font-default
+    font-size 16px
+    color $color-dark-jungle-green
+    line-height 24px
+
+  &__button
+    padding-top 50px
+
+  &__note
+    padding-top 55px
+    font-family $font-default
+    font-size 14px
+    color $color-taupe-gray
+    line-height 18px
 
 .ui-home-results
   padding 65px 0 55px

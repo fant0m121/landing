@@ -10,10 +10,10 @@ doctype html
 head
   meta(charset='utf-8')
   meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-  title socialsend
-  meta(name='description', content= 'A new Yeogurt application')
+  title SocialSend — сервис экологичных авторассылок VK
+  meta(name='description', content= 'SocialSend — сервис экологичных авторассылок VK')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic", rel="stylesheet")
   link(href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400", rel="stylesheet")
 
@@ -24,7 +24,8 @@ body
   <!--[if lt IE 11]>
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-
+  .ui-preloader.js-preloader
+    .ui-preloader__status &nbsp;
   header.ui-header.js-header
     .l-grid.l-grid--container
       .l-row.l-row--lg-middle
@@ -40,7 +41,7 @@ body
               .ui-menu__item
                 a.ui-menu__link(href="#i-reviews") Отзывы
         .l-col.l-col--xs-auto.l-col--lg-offset-1.l-col--lg-auto
-          a.ui-header__trial(href="/") Пробная версия
+          a.ui-header__trial(href="#i-free") Пробная версия
         .l-col.l-col--xs-auto.l-col--xs-pull-right.l-col--md-hidden
           .ui-header__hamburger.js-mobile-menu
             .ui-header__hamburger-line

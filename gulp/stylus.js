@@ -15,7 +15,7 @@ module.exports = function(gulp, plugins, args, config, taskTarget, browserSync) 
       .pipe(plugins.plumber())
       .pipe(plugins.sourcemaps.init())
       .pipe(plugins.stylus({
-        compress: true,
+        compress: false,
         'include css': true
       }))
       .on('error', function(err) {
@@ -28,7 +28,6 @@ module.exports = function(gulp, plugins, args, config, taskTarget, browserSync) 
         // Ex: 'src/_styles' --> '/styles'
         filepath.dirname = filepath.dirname.replace(dirs.source, '').replace('_', '');
       }))
-      .pipe(gulpif(args.production, plugins.cssnano({rebase: false})))
       .pipe(plugins.sourcemaps.write('./'))
       .pipe(gulp.dest(dest))
       .pipe(browserSync.stream({match: '**/*.css'}));
